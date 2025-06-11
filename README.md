@@ -3,6 +3,7 @@
 ![Status do Projeto](https://img.shields.io/badge/status-conclu%C3%ADdo-green)
 
 ## Sobre o Projeto
+
 <p align="justify">
 Este projeto é uma aplicação web completa de Agenda de Contatos desenvolvida em Django. A plataforma permite que usuários se cadastrem, façam login e gerenciem seus próprios contatos de forma segura e eficiente. Cada usuário tem acesso apenas aos contatos que criou, garantindo a privacidade dos dados.
 </p>
