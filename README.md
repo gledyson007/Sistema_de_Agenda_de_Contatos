@@ -1,70 +1,80 @@
-# Sistema de Agenda de Contatos 📖
+# Sistema de Agenda de Contatos
 
-![Status do Projeto](https://img.shields.io/badge/status-conclu%C3%ADdo-green)
-
-## Sobre o Projeto
-
-<p align="justify">
-Este projeto é uma aplicação web completa de Agenda de Contatos desenvolvida em Django. A plataforma permite que usuários se cadastrem, façam login e gerenciem seus próprios contatos de forma segura e eficiente. Cada usuário tem acesso apenas aos contatos que criou, garantindo a privacidade dos dados.
+<p align="center">
+  <img src="https://raw.githubusercontent.com/gledyson007/Sistema_de_Agenda_de_Contatos/main/assets/tela-inicial.png" alt="Tela Inicial" width="420"/>
+  <img src="https://raw.githubusercontent.com/gledyson007/Sistema_de_Agenda_de_Contatos/main/assets/contact.png" alt="Formulário de Contato" width="420"/>
 </p>
-<p align="justify">
-O sistema implementa todas as operações essenciais de um CRUD (Create, Read, Update, Delete) para os contatos, além de funcionalidades de busca e um sistema de autenticação de usuários robusto.
+<p align="center">
+  <img src="https://raw.githubusercontent.com/gledyson007/Sistema_de_Agenda_de_Contatos/main/assets/login.png" alt="Tela de Login" width="420"/>
+  <img src="https://raw.githubusercontent.com/gledyson007/Sistema_de_Agenda_de_Contatos/main/assets/sing-up.png" alt="Tela de Registro" width="420"/>
 </p>
 
----
-
-## Funcionalidades
-
--   ✅ **Autenticação de Usuários:** Sistema completo de registro, login e logout.
--   🔒 **Segurança:** Usuários só podem ver e editar os seus próprios contatos.
--   👤 **Gerenciamento de Usuário:** Permite que o usuário atualize suas próprias informações (nome, sobrenome, email).
--   ➕ **Criar Contatos:** Adicionar novos contatos à agenda pessoal.
--   ✏️ **Editar Contatos:** Atualizar informações de contatos existentes.
--   🗑️ **Deletar Contatos:** Remover contatos da agenda.
--   🔍 **Buscar Contatos:** Funcionalidade de busca para encontrar contatos rapidamente pelo nome ou sobrenome.
--   📱 **Design Responsivo:** Interface que se adapta a diferentes tamanhos de tela (desktop, tablet e mobile).
-
----
+Sistema de gerenciamento de contatos pessoais desenvolvido com Django, com funcionalidades completas para cadastro, autenticação de usuários e manipulação de contatos.
 
 ## Tecnologias Utilizadas
 
-As seguintes ferramentas e tecnologias foram usadas na construção do projeto:
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![Git](https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white)
 
--   **Backend:** Python, Django
--   **Frontend:** HTML, CSS
--   **Banco de Dados:** SQLite3 (padrão do Django para desenvolvimento)
--   **Controle de Versão:** Git e GitHub
+## Funcionalidades
 
----
+-   **CRUD Completo de Contatos** - Cadastro, leitura, atualização e remoção de contatos do sistema.
+-   **Autenticação de Usuários** - Sistema de login e registro seguro, onde cada usuário só pode ver seus próprios contatos.
+-   **Gerenciamento de Perfil** - Usuários podem visualizar e atualizar suas próprias informações.
+-   **Busca de Contatos** - Pesquisa eficiente para encontrar contatos no acervo pessoal.
+-   **Upload de Imagens** - Capacidade de associar uma imagem de perfil a cada contato.
+-   **Sistema Visual e Responsivo** - Interface limpa e adaptável para uso em desktop e dispositivos móveis.
+
+## Pré-requisitos
+
+-   Python 3.8+
+-   Git
 
 ## Como Executar o Projeto
 
-Siga as instruções abaixo para rodar o projeto em sua máquina local.
+1.  **Clonar o repositório**:
+    ```bash
+    git clone [https://github.com/gledyson007/Sistema_de_Agenda_de_Contatos.git](https://github.com/gledyson007/Sistema_de_Agenda_de_Contatos.git)
+    cd Sistema_de_Agenda_de_Contatos
+    ```
 
-```bash
-# 1. Clone este repositório
-$ git clone [https://github.com/gledyson007/Sistema_de_Agenda_de_Contatos.git](https://github.com/gledyson007/Sistema_de_Agenda_de_Contatos.git)
+2.  **Criar e ativar o ambiente virtual**:
+    ```bash
+    python -m venv venv
+    # No Windows:
+    venv\Scripts\activate
+    # No Linux/macOS:
+    source venv/bin/activate
+    ```
 
-# 2. Acesse a pasta do projeto
-$ cd Sistema_de_Agenda_de_Contatos
+3.  **Instalar as dependências**:
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-# 3. Crie um ambiente virtual (recomendado)
-$ python -m venv venv
+4.  **Aplicar as migrações do banco de dados**:
+    ```bash
+    python manage.py migrate
+    ```
 
-# 4. Ative o ambiente virtual
-# No Windows:
-$ venv\Scripts\activate
-# No Linux ou macOS:
-$ source venv/bin/activate
+5.  **Criar um superusuário (opcional, para testes)**:
+    ```bash
+    python manage.py createsuperuser
+    ```
 
-# 5. Instale as dependências do projeto
-# (Certifique-se de que você tem um arquivo requirements.txt)
-$ pip install -r requirements.txt
+6.  **Iniciar a aplicação**:
+    ```bash
+    python manage.py runserver
+    ```
 
-# 6. Aplique as migrações do banco de dados
-$ python manage.py migrate
+7.  **Acesse a aplicação no seu navegador**:
+    ```
+    [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
+    ```
 
-# 7. Inicie o servidor de desenvolvimento
-$ python manage.py runserver
+---
 
-# 8. Abra o navegador e acesse [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
+#### Desenvolvido por Gledyson © 2025
